@@ -17,8 +17,8 @@ title: Kohldampfmaschine
 email: simonneutert@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Die Uhr steht auf Mahlzeit. Der Magen knurrt. Los wir gehen Edeka!
-# baseurl: "/Kohldampfmaschine" # the subpath of your site, e.g. /blog
-# url: "http://simonneutert.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/Kohldampfmaschine" # the subpath of your site, e.g. /blog
+url: "http://simonneutert.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  simonneutert
 
@@ -54,9 +54,37 @@ defaults:
       share: true
       related: true
 
-include: ["_pages"]
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-data
   - jekyll-paginate
   - jekyll-sitemap
